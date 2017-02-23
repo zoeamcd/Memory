@@ -1,11 +1,18 @@
 /**
  * Created by h205p2 on 2/14/17.
  */
+
 function createGrid(side){
-    document.createElement('table');
+    $(document).ready(function(){
+        $("table").hide();
+    });
+    var grid = document.createElement('table');
+    document.getElementById('table').appendChild(grid);
+    grid.id = 'grid'+side;
+
     for (var i = 0; i < side; i++){
         var row = document.createElement('tr');
-        document.getElementById('grid').appendChild(row);
+        grid.appendChild(row);
         for (var j = 0; j < side; j++){
             var cell = document.createElement('td');
             row.appendChild(cell);
@@ -13,8 +20,5 @@ function createGrid(side){
             row.appendChild(cell);
         }
     }
-    document.getElementById("0,0").innerHTML = "0,0"
-    $(document).ready(function(){
-        $("button").hide();
-    });
 }
+
