@@ -1,6 +1,9 @@
 /**
  * Created by h205p2 on 2/14/17.
  */
+function flip(){
+    alert("success")
+}
 
 function createGrid(side){
     $(document).ready(function(){
@@ -21,4 +24,9 @@ function createGrid(side){
         }
     }
 }
+$(document).ready(function(){
+$("td").click(function(){
+    alert("The cell was clicked.");
+});
+});
 
